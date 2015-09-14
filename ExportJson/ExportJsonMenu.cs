@@ -127,12 +127,18 @@ namespace ExportJson
             stringBuilder.Append("]");
             string json = stringBuilder.ToString();
 
-            string path = Directory.GetCurrentDirectory() + @"/Json";
-            if (!Directory.Exists(path))
-            {
-                Directory.CreateDirectory(path);
-            }
+            /*
+            byte[] unicodeBuf = Encoding.Unicode.GetBytes(json);
+            byte[] utfBuf = Encoding.Convert(Encoding.Unicode, Encoding.UTF8, unicodeBuf);
+            json = Encoding.UTF8.GetString(utfBuf);
+             * */
+            //验证JSON
+            /*
+            string utfJson = GB2312ToUTF8(json);
 
+            JsonData dataSrc = JsonMapper.ToObject(utfJson);
+            int a = 0;
+            */
 
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "json文件(*.json)|";
@@ -143,11 +149,46 @@ namespace ExportJson
                 saveFileDialog.FileName += ".json";
             }
 
+
+
             FileStream fs = new FileStream(saveFileDialog.FileName, FileMode.OpenOrCreate);
-            StreamWriter sw = new StreamWriter(fs, Encoding.UTF8);
+            StreamWriter sw = new StreamWriter(fs);
             sw.Write(json);
             sw.Close();
+
+            MessageBox.Show("导出完成");
         }
+
+        /*
+        public string GB2312ToUTF8(string str)
+        {
+            try
+            {
+                Encoding uft8 = Encoding.GetEncoding(65001);
+                Encoding gb2312 = Encoding.GetEncoding("gb2312");
+                byte[] temp = gb2312.GetBytes(str);
+                //MessageBox.Show("gb2312的编码的字节个数：" + temp.Length);
+                / *
+                for (int i = 0; i < temp.Length; i++)
+                {
+                    MessageBox.Show(Convert.ToUInt16(temp[i]).ToString());
+                }
+                 * * /
+                byte[] temp1 = Encoding.Convert(gb2312, uft8, temp);
+                //MessageBox.Show("uft8的编码的字节个数：" + temp1.Length);
+//                 for (int i = 0; i < temp1.Length; i++)
+//                 {
+//                     MessageBox.Show(Convert.ToUInt16(temp1[i]).ToString());
+//                 }
+                string result = uft8.GetString(temp1);
+                return result;
+            }
+            catch (Exception ex)//(UnsupportedEncodingException ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return null;
+            }
+        }*/
 
         List<Excel.Range> GetLine(Excel.Worksheet sheet, int lineNum)
         {
