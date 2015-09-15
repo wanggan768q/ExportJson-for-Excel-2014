@@ -222,6 +222,24 @@ namespace ExportJson
             return _Cells;
         }
 
+
+
+        /*
+        private void GetLine()
+        {
+            Excel.Worksheet activeWorksheet = Globals.ThisAddIn.Application.ActiveSheet;
+            for (int row = 1; row <= activeWorksheet.UsedRange.Rows.Count; row++)
+            {
+                for (int col = 1; col <= activeWorksheet.UsedRange.Columns.Count; col++)
+                {
+                    Excel.Range rng = activeWorksheet.Cells[row, col];
+                    int a = 0;
+                }
+                
+
+            }
+        }
+        */
         #endregion
 
         #region 帮助器

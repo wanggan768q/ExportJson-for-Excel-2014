@@ -216,6 +216,9 @@
   <ItemGroup>
     <EmbeddedResource Include="ExportJsonMenu.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="res\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
