@@ -97,11 +97,15 @@ namespace ExportJson
                     if (i < dataRang.Count)
                     {
                         string v = dataRang[i].Text;
-                        Regex reg = new Regex(@"^[-]?[1-9]{1}\d*$|^[0]{1}$");
-                        bool ismatch = reg.IsMatch(v);
-                        if (ismatch)
+                        bool isInteger = Regex.IsMatch(v, @"^[-]?[1-9]{1}\d*$|^[0]{1}$");
+                        bool isDecimal = Regex.IsMatch(v, @"^(-?\d+)(\.\d+)?$");
+                        if (isInteger)
                         {
                             stringBuilder.Append(Convert.ToInt64(v));
+                        }
+                        else if(isDecimal)
+                        {
+                            stringBuilder.Append(Convert.ToDouble(v));
                         }
                         else
                         {

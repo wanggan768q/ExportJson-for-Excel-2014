@@ -6,13 +6,15 @@
         <group id="MyGroup"
                label="郭晓波插件">
           <button id="textButton" label="导出json文件"
-                  image="res/icon192.png"
-               screentip="自动导出Json插件" onAction="OnExportJson"
-               supertip="自动导到当前Excel文件下的Json目录"/>
+                  image="res/josn_icon.png"
+          screentip="自动导出Json插件" onAction="OnExportJson"
+          supertip="自动导到当前Excel文件下的Json目录"/>
         </group>
       </tab>
-      <!--
       
+      
+      
+      <!--
       <tab idMso="TabAddIns">
         <group id="ContentGroup" label="Content">
           <button id="textButton" label="Insert Text"
