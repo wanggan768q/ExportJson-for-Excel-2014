@@ -5,8 +5,7 @@
       <tab idMso="TabAddIns">
         <group id="MyGroup"
                label="郭晓波插件">
-          <button id="textButton" label="导出json文件"
-                  image="res/josn_icon.png"
+          <button id="textButton" label="导出json文件" image="JsonIcon"
           screentip="自动导出Json插件" onAction="OnExportJson"
           supertip="自动导到当前Excel文件下的Json目录"/>
         </group>

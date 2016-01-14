@@ -146,7 +146,10 @@ namespace ExportJson
 
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "json文件(*.json)|";
+            string fileName = Path.GetFileNameWithoutExtension(Globals.ThisAddIn.Application.ActiveWorkbook.FullName);
+            saveFileDialog.FileName = fileName;
             saveFileDialog.ShowDialog();
+            
 
             if(!saveFileDialog.FileName.EndsWith(".json"))
             {

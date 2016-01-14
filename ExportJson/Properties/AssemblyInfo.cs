@@ -7,7 +7,7 @@ using System.Security;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("ExportJson")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("")] 
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ExportJson")]

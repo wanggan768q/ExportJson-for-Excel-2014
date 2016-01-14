@@ -16,6 +16,7 @@ namespace ExportJson
         protected override Microsoft.Office.Core.IRibbonExtensibility CreateRibbonExtensibilityObject()
         {
             return new ExportJsonMenu();
+            //return null;
         }
 
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
