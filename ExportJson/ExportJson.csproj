@@ -34,7 +34,7 @@
     <PublishUrl>E:\Application\ExportJsonPlugins\</PublishUrl>
     <InstallUrl />
     <TargetCulture>zh-chs</TargetCulture>
-    <ApplicationVersion>1.1.0.21</ApplicationVersion>
+    <ApplicationVersion>1.1.0.24</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>0</UpdateInterval>
@@ -180,7 +180,7 @@
     can be found.
   -->
   <ItemGroup>
-    <Compile Include="ExportClass.cs" />
+    <Compile Include="ExportCShape.cs" />
     <Compile Include="ExportJsonMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

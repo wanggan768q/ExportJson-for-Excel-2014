@@ -97,6 +97,7 @@ namespace ExportJson
                     if (i < dataRang.Count)
                     {
                         string v = dataRang[i].Text;
+                        v = v.TrimEnd();
                         bool isInteger = Regex.IsMatch(v, @"^[-]?[1-9]{1}\d*$|^[0]{1}$");
                         bool isDecimal = Regex.IsMatch(v, @"^(-?\d+)(\.\d+)?$");
                         if (isInteger)
@@ -149,19 +150,23 @@ namespace ExportJson
             string fileName = Path.GetFileNameWithoutExtension(Globals.ThisAddIn.Application.ActiveWorkbook.FullName);
             saveFileDialog.FileName = fileName;
             saveFileDialog.ShowDialog();
-            
 
+            string jsonFileName = "";
             if(!saveFileDialog.FileName.EndsWith(".json"))
             {
-                saveFileDialog.FileName += ".json";
+                jsonFileName = saveFileDialog.FileName + ".json";
             }
 
 
 
-            FileStream fs = new FileStream(saveFileDialog.FileName, FileMode.OpenOrCreate);
+            FileStream fs = new FileStream(jsonFileName, FileMode.OpenOrCreate);
             StreamWriter sw = new StreamWriter(fs);
             sw.Write(json);
             sw.Close();
+
+            ExportCShape ex = new ExportCShape(saveFileDialog.FileName);
+            ex.AddField("描述...", FieldType.Int, "Name");
+            ex.Finish();
 
             MessageBox.Show("导出完成");
         }
