@@ -96,8 +96,9 @@ namespace ExportJson
                     stringBuilder.Append("\"" + _Keys[i] + "\":");
                     if (i < dataRang.Count)
                     {
-                        string v = dataRang[i].Text;
-                        v = v.TrimEnd();
+                        StringBuilder v1 = new StringBuilder(dataRang[i].Text);
+                        //string v = dataRang[i].Text;
+                        string v = v1.ToString().TrimEnd();
                         bool isInteger = Regex.IsMatch(v, @"^[-]?[1-9]{1}\d*$|^[0]{1}$");
                         bool isDecimal = Regex.IsMatch(v, @"^(-?\d+)(\.\d+)?$");
                         if (isInteger)
