@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExportJson.Properties {
+namespace ExportJsonPlugin.Properties {
     using System;
     
     

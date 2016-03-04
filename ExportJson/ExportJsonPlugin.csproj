@@ -22,7 +22,7 @@
     <ProjectTypeGuids>{BAA0C2D2-18E2-41B9-852F-F413020CAA33};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C81577D8-84AD-40C1-9316-257B0CCCFB22}</ProjectGuid>
+    <ProjectGuid>{1FD54CD9-CF79-438A-BA29-29F49C6EFAD1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <NoStandardLibraries>false</NoStandardLibraries>
     <RootNamespace>ExportJson</RootNamespace>
@@ -35,7 +35,7 @@
     <PublishUrl>E:\Application\ExportJsonPlugins\</PublishUrl>
     <InstallUrl />
     <TargetCulture>zh-chs</TargetCulture>
-    <ApplicationVersion>1.1.0.25</ApplicationVersion>
+    <ApplicationVersion>1.1.0.27</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>0</UpdateInterval>
@@ -188,11 +188,18 @@
     can be found.
   -->
   <ItemGroup>
-    <Compile Include="ExportCShape.cs" />
-    <Compile Include="ExportJsonMenu.cs" />
+    <Compile Include="ExportJson.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExportJson.Designer.cs">
+      <DependentUpon>ExportJson.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <EmbeddedResource Include="ExportJson.resx">
+      <DependentUpon>ExportJson.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -205,7 +212,6 @@
     </Compile>
     <None Include="app.config" />
     <None Include="ExportJson_TemporaryKey.pfx" />
-    <None Include="key.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -226,11 +232,6 @@
       <DependentUpon>ThisAddIn.Designer.xml</DependentUpon>
     </Compile>
     <AppDesigner Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="ExportJsonMenu.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\josn_icon.png" />

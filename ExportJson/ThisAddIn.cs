@@ -8,16 +8,12 @@ using Office = Microsoft.Office.Core;
 using Microsoft.Office.Tools.Excel;
 using System.Text.RegularExpressions;
 using System.IO;
+using Microsoft.Office.Tools.Ribbon;
 
-namespace ExportJson
+namespace ExportJsonPlugin
 {
     public partial class ThisAddIn
     {
-        protected override Microsoft.Office.Core.IRibbonExtensibility CreateRibbonExtensibilityObject()
-        {
-            return new ExportJsonMenu();
-        }
-
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
             //this.Application.WorkbookBeforeSave += new Microsoft.Office.Interop.Excel.AppEvents_WorkbookBeforeSaveEventHandler(Application_WorkbookBeforeSave);
@@ -38,9 +34,11 @@ namespace ExportJson
             this.Startup += new System.EventHandler(ThisAddIn_Startup);
             this.Shutdown += new System.EventHandler(ThisAddIn_Shutdown);
         }
-        
         #endregion
 
-
+        protected override IRibbonExtension[] CreateRibbonObjects()
+        {
+            return new IRibbonExtension[] { new ExportJson() };
+        }
     }
 }
