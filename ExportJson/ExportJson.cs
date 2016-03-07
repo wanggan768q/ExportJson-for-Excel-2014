@@ -51,6 +51,11 @@ namespace ExportJsonPlugin
         private void ExportJsonOfNormal(object sender, RibbonControlEventArgs e)
         {
             Excel.Worksheet activeWorksheet = Globals.ThisAddIn.Application.ActiveSheet;
+            if(activeWorksheet == null)
+            {
+                MessageBox.Show("请启动编辑模式");
+                return;
+            }
             List<string> _Keys = new List<string>();
 
             List<Excel.Range> keyRang = GetLine(activeWorksheet, 1);
@@ -150,6 +155,11 @@ namespace ExportJsonPlugin
         private void ExportJsonOfType(object sender, RibbonControlEventArgs e)
         {
             Excel.Worksheet activeWorksheet = Globals.ThisAddIn.Application.ActiveSheet;
+            if (activeWorksheet == null)
+            {
+                MessageBox.Show("请启动编辑模式");
+                return;
+            }
             List<string> _Keys = new List<string>();
             //字段类型
             List<Excel.Range> typeRang = GetLine(activeWorksheet, 2);
