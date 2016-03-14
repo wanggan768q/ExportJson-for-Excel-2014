@@ -146,7 +146,7 @@ namespace ExportJsonPlugin
         /// <summary>
         /// 根据类型导出数据
         /// 1.描述
-        /// 2.类型  I->int F->float S->String
+        /// 2.类型  I->int F->float S->String B->bool
         /// 3.字段
         /// 4.数据  一级分隔符| 二级分隔符 _
         /// </summary>
@@ -223,6 +223,24 @@ namespace ExportJsonPlugin
                                     v = v.Replace('\r', ' ');
                                     v = v.Replace('\n', ' ');
                                     stringBuilder.Append("\"" + v + "\"");
+                                }
+                                break;
+                            case "B":
+                                {
+                                    v = v.Trim();
+                                    v = v.ToLower();
+                                    if (v.Equals("0") || v.Equals(bool.FalseString.ToLower()))
+                                    {
+                                        stringBuilder.Append(bool.FalseString.ToLower());
+                                    }
+                                    else if (v.Equals("1") || v.Equals(bool.TrueString.ToLower()))
+                                    {
+                                        stringBuilder.Append(bool.TrueString.ToLower());
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("错误的类型: [ " + fieldType + " ]");
+                                    }
                                 }
                                 break;
                             default:
