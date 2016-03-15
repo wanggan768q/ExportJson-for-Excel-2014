@@ -29,11 +29,11 @@
     <AssemblyName>ExportJson</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <DefineConstants>VSTO40</DefineConstants>
-    <IsWebBootstrapper>False</IsWebBootstrapper>
+    <IsWebBootstrapper>True</IsWebBootstrapper>
     <TargetFrameworkProfile />
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <PublishUrl>E:\Application\ExportJsonPlugins\</PublishUrl>
-    <InstallUrl />
+    <PublishUrl>F:\VSWork\ExportJson-for-Excel-2014\Download\</PublishUrl>
+    <InstallUrl>https://github.com/wanggan768q/ExportJson-for-Excel-2014/a/</InstallUrl>
     <TargetCulture>zh-chs</TargetCulture>
     <ApplicationVersion>1.1.0.27</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
