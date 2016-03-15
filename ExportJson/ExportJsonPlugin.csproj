@@ -35,7 +35,7 @@
     <PublishUrl>F:\VSWork\ExportJson-for-Excel-2014\Download\</PublishUrl>
     <InstallUrl>https://github.com/wanggan768q/ExportJson-for-Excel-2014/blob/master/Download/</InstallUrl>
     <TargetCulture>zh-chs</TargetCulture>
-    <ApplicationVersion>1.1.0.28</ApplicationVersion>
+    <ApplicationVersion>1.1.0.29</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>0</UpdateInterval>
