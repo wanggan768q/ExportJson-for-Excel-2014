@@ -106,7 +106,7 @@ namespace ExportJsonPlugin
                         }
                         else
                         {
-                            v = v.Replace('\r', ' ');
+                            //v = v.Replace('\r', ' ');
                             v = v.Replace('\n', ' ');
                             stringBuilder.Append("\"" + v + "\"");
                         }
