@@ -6,6 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
+using LitJson;
 
 namespace ExportJsonPlugin
 {
@@ -17,6 +18,17 @@ namespace ExportJsonPlugin
 
         private void Save(string json)
         {
+            try
+            {
+                JsonData jd = JsonMapper.ToObject(json);
+            }
+            catch (System.Exception _ex)
+            {
+                MessageBox.Show(_ex.ToString(),"数据异常");
+                return;
+            }
+            
+
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "json文件(*.json)|";
             string fileName = Path.GetFileNameWithoutExtension(Globals.ThisAddIn.Application.ActiveWorkbook.FullName);

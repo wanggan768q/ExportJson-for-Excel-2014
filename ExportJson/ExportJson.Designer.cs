@@ -57,8 +57,10 @@
             // 
             // normalExportJson
             // 
+            this.normalExportJson.Image = global::ExportJsonPlugin.Properties.Resources.JsonIcon;
             this.normalExportJson.Label = "导出JSON文件";
             this.normalExportJson.Name = "normalExportJson";
+            this.normalExportJson.ShowImage = true;
             this.normalExportJson.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ExportJsonOfNormal);
             // 
             // typeExportJson
