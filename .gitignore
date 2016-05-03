@@ -212,3 +212,6 @@ _Pvt_Extensions/
 ModelManifest.xml
 ExportJson/bin/
 ExportJson/obj/
+ExportJson/bin/Debug/
+ExportJson/bin/Debug/
+ExportJson/ExportJsonPlugin.csproj.user
