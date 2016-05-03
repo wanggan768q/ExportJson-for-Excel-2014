@@ -194,6 +194,7 @@
     <Compile Include="ExportJson.Designer.cs">
       <DependentUpon>ExportJson.cs</DependentUpon>
     </Compile>
+    <Compile Include="fastJSON.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
