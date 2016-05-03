@@ -210,5 +210,5 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
-ExportJson/bin/*
-ExportJson/obj/*
+ExportJson/bin/
+ExportJson/obj/
