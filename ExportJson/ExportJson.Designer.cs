@@ -36,8 +36,8 @@
         {
             this.tab1 = this.Factory.CreateRibbonTab();
             this.JsonGroup = this.Factory.CreateRibbonGroup();
-            this.normalExportJson = this.Factory.CreateRibbonButton();
             this.typeExportJson = this.Factory.CreateRibbonButton();
+            this.normalExportJson = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.JsonGroup.SuspendLayout();
             this.SuspendLayout();
@@ -55,19 +55,17 @@
             this.JsonGroup.Items.Add(this.typeExportJson);
             this.JsonGroup.Name = "JsonGroup";
             // 
-            // normalExportJson
-            // 
-            this.normalExportJson.Image = global::ExportJsonPlugin.Properties.Resources.JsonIcon;
-            this.normalExportJson.Label = "导出JSON文件";
-            this.normalExportJson.Name = "normalExportJson";
-            this.normalExportJson.ShowImage = true;
-            this.normalExportJson.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ExportJsonOfNormal);
-            // 
             // typeExportJson
             // 
             this.typeExportJson.Label = "类型模式导出JSON文件";
             this.typeExportJson.Name = "typeExportJson";
             this.typeExportJson.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ExportJsonOfType);
+            // 
+            // normalExportJson
+            // 
+            this.normalExportJson.Label = "导出JSON文件";
+            this.normalExportJson.Name = "normalExportJson";
+            this.normalExportJson.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ExportJsonOfNormal);
             // 
             // ExportJson
             // 
@@ -87,8 +85,8 @@
 
         internal Microsoft.Office.Tools.Ribbon.RibbonTab tab1;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup JsonGroup;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton normalExportJson;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton typeExportJson;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton normalExportJson;
     }
 
     partial class ThisRibbonCollection

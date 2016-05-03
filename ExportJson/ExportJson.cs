@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
-using LitJson;
+using fastJSON;
 
 namespace ExportJsonPlugin
 {
@@ -20,15 +20,13 @@ namespace ExportJsonPlugin
         {
             try
             {
-                JsonData jd = JsonMapper.ToObject(json);
+                JSON.Instance.Parse(json);
             }
             catch (System.Exception _ex)
             {
-                MessageBox.Show(_ex.ToString(),"数据异常");
+                MessageBox.Show("数据异常,请检查");
                 return;
             }
-            
-
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "json文件(*.json)|";
             string fileName = Path.GetFileNameWithoutExtension(Globals.ThisAddIn.Application.ActiveWorkbook.FullName);
@@ -46,10 +44,11 @@ namespace ExportJsonPlugin
             sw.Write(json);
             sw.Close();
 
+            
             //             ExportCShape ex = new ExportCShape(saveFileDialog.FileName);
             //             ex.AddField("描述...", FieldType.Int, "Name");
             //             ex.Finish();
-
+            
             MessageBox.Show("导出完成");
         }
 
@@ -137,7 +136,6 @@ namespace ExportJsonPlugin
             stringBuilder.Remove(stringBuilder.Length - 1, 1);
             stringBuilder.Append("]");
             string json = stringBuilder.ToString();
-
             /*
             byte[] unicodeBuf = Encoding.Unicode.GetBytes(json);
             byte[] utfBuf = Encoding.Convert(Encoding.Unicode, Encoding.UTF8, unicodeBuf);
@@ -152,7 +150,6 @@ namespace ExportJsonPlugin
             */
 
             this.Save(json);
-
         }
 
         /// <summary>
@@ -311,6 +308,5 @@ namespace ExportJsonPlugin
             }
             return _Cells;
         }
-
     }
 }
