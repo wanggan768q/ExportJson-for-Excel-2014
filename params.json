@@ -1,7 +1,7 @@
 {
   "name": "Excel 导出 Json 数据插件",
   "tagline": "Excel 插件 导出 Json 数据格式",
-  "body": "# ExportJson-for-Excel-2014\r\nExcel 插件 导出 Json 数据格式\r\n\r\n导出文件的时候不能使用UTF8格式的文件，因为这种文件的头信息是占用字符的\r\n\r\nExcel格式如下：\r\n\r\n第一行：描述\r\n\r\n第二行：类型  I->int F->float S->String B->bool\r\n\r\n第三行：字段名\r\n\r\n#安装包下载\r\n[ExportJson 1.1.0.30 安装包下载](https://github.com/wanggan768q/ExportJson-for-Excel-2014/blob/master/Download/ExportJson_1_1_0_30.zip)  \r\n[ExportJson 1.1.0.29 安装包下载](https://github.com/wanggan768q/ExportJson-for-Excel-2014/blob/master/Download/ExportJson_1_1_0_29.zip)  \r\n[ExportJson 1.1.0.28 安装包下载](https://github.com/wanggan768q/ExportJson-for-Excel-2014/blob/master/Download/ExportJson_1_1_0_28.zip)  \r\n \r\n\r\n",
+  "body": "# ExportJson-for-Excel-2014\r\nExcel 插件 导出 Json 数据格式\r\n\r\n导出文件的时候不能使用UTF8格式的文件，因为这种文件的头信息是占用字符的\r\n\r\nExcel格式如下：\r\n\r\n第一行：描述\r\n\r\n第二行：类型  I->int F->float S->String B->bool\r\n\r\n第三行：字段名\r\n\r\n#安装包下载\r\n[ExportJson 1.1.0.30 安装包下载](https://raw.githubusercontent.com/wanggan768q/ExportJson-for-Excel-2014/master/Download/ExportJson_1_1_0_30.zip)  \r\n[ExportJson 1.1.0.29 安装包下载](https://raw.githubusercontent.com/wanggan768q/ExportJson-for-Excel-2014/master/Download/ExportJson_1_1_0_29.zip)  \r\n[ExportJson 1.1.0.28 安装包下载](https://raw.githubusercontent.com/wanggan768q/ExportJson-for-Excel-2014/master/Download/ExportJson_1_1_0_28.zip)  \r\n \r\n\r\n",
   "google": "",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
