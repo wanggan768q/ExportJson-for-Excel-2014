@@ -10,3 +10,10 @@ Excel格式如下：
 第二行：类型  I->int F->float S->String B->bool
 
 第三行：字段名
+
+#安装包下载
+[ExportJson 1.1.0.30 安装包下载](https://github.com/wanggan768q/ExportJson-for-Excel-2014/blob/master/Download/ExportJson_1_1_0_30.rar)  
+[ExportJson 1.1.0.29 安装包下载](https://github.com/wanggan768q/ExportJson-for-Excel-2014/blob/master/Download/ExportJson_1_1_0_29.rar)  
+[ExportJson 1.1.0.28 安装包下载](https://github.com/wanggan768q/ExportJson-for-Excel-2014/blob/master/Download/ExportJson_1_1_0_28.rar)  
+ 
+
