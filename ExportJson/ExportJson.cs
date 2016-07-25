@@ -173,12 +173,12 @@ namespace ExportJsonPlugin
             keyRang.Clear();
 
             Excel.Worksheet activeWorksheet = Globals.ThisAddIn.Application.ActiveSheet;
-            if (activeWorksheet == null)
-            {
-                MessageBox.Show("请启动编辑模式");
-                return;
-            }
-            List<string> _Keys = new List<string>();
+            string[] fileName = activeWorksheet.Application.Caption.Split('.');
+
+            List<string> Keys = new List<string>();
+
+            List<string> Des = new List<string>();
+            Des = GetLine(activeWorksheet, 1);
 
             keyRang = GetLine(activeWorksheet, 3);
 
@@ -196,14 +196,14 @@ namespace ExportJsonPlugin
             {
                 string cell = keyRang[i];
                 _FieldsDic.Add(cell, typeRang[i]);
-                _Keys.Add(cell);
+                Keys.Add(cell);
             }
 
             if (_FieldsDic.Count == 0)
             {
                 return;
             }
-
+            
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append("[");
             int index = 3;
@@ -217,7 +217,7 @@ namespace ExportJsonPlugin
 
                 stringBuilder.Append("{");
 
-                for (int i = 0; i < _Keys.Count; ++i)
+                for (int i = 0; i < Keys.Count; ++i)
                 {
                     stringBuilder.Append("\"" + ((string)keyRang[i]).Trim() + "\":");
                     string fieldType = ((string)typeRang[i]).Trim();
@@ -266,7 +266,7 @@ namespace ExportJsonPlugin
                                 break;
                             default:
                                 {
-                                    MessageBox.Show("错误的类型1: [ " + fieldType + " ]");
+                                    MessageBox.Show("错误的类型: [ " + fieldType + " ]");
                                 }
                                 break;
                         }
@@ -275,7 +275,7 @@ namespace ExportJsonPlugin
                     {
                         stringBuilder.Append("");
                     }
-                    if (i != _Keys.Count - 1)
+                    if (i != Keys.Count - 1)
                     {
                         stringBuilder.Append(",");
                     }
@@ -286,6 +286,9 @@ namespace ExportJsonPlugin
             stringBuilder.Append("]");
             string json = stringBuilder.ToString();
             this.Save(json);
+
+            UnityCS cs = new UnityCS();
+            cs.Export(fileName[0], typeRang, keyRang,Des);
         }
 
         /// <summary>
@@ -341,7 +344,7 @@ namespace ExportJsonPlugin
                                 break;
                             default:
                                 {
-                                    MessageBox.Show("错误的类型2: [ " + type + " ]");
+                                    MessageBox.Show("错误的类型: [ " + type + " ]");
                                 }
                                 break;
                         }

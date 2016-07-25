@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExportJsonPlugin.Properties {
+namespace ExportJson.Properties {
     using System;
     
     
@@ -61,12 +61,48 @@ namespace ExportJsonPlugin.Properties {
         }
         
         /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        ///   查找类似 using UnityEngine;
+        ///using GenPB;
+        ///using System;
+        ///using System.IO;
+        ///using System.Collections;
+        ///using System.Collections.Generic;
+        ///
+        ///
+        /////$CNName$配置数据类
+        ///public class $Template$Element
+        ///{
+        ///$FieldDefine$
+        ///	public bool IsValidate = false;
+        ///	public $Template$Element()
+        ///	{
+        ///		$InitPrimaryField$
+        ///	}
+        ///};
+        ///
+        /////$CNName$配置封装类
+        ///public class $Template$Table
+        ///{
+        ///
+        ///	private $Template$Table()
+        ///	{
+        ///		m_mapElements = new Dictionary&lt;int, $Template$Element&gt;();
+        ///		m_emptyItem = new $Template$Element();
+        ///		m_vecAllElements = new L [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
-        internal static System.Drawing.Bitmap JsonIcon {
+        internal static string ConfigTemplate {
             get {
-                object obj = ResourceManager.GetObject("JsonIcon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("ConfigTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似于 (Icon) 的 System.Drawing.Icon 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Icon josn_icon {
+            get {
+                object obj = ResourceManager.GetObject("josn_icon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
     }

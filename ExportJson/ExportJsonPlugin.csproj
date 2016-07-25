@@ -198,6 +198,8 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <None Include="res\ConfigTemplate.cs" />
+    <Compile Include="UnityCS.cs" />
     <EmbeddedResource Include="ExportJson.resx">
       <DependentUpon>ExportJson.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +242,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\josn_icon.ico" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
