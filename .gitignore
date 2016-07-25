@@ -210,6 +210,8 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+ExportJson/bin/*
+ExportJson/obj*
 ExportJson/bin/Debug/ExportJson.dll
 ExportJson/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 ExportJson/obj/Debug/ExportJson.dll
