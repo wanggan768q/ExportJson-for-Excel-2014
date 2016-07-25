@@ -1,9 +1,0 @@
-F:\VSWork\ExportJson-for-Excel-2014\ExportJson\bin\Debug\ExportJson.dll
-F:\VSWork\ExportJson-for-Excel-2014\ExportJson\bin\Debug\ExportJson.pdb
-F:\VSWork\ExportJson-for-Excel-2014\ExportJson\bin\Debug\ExportJson.dll.manifest
-F:\VSWork\ExportJson-for-Excel-2014\ExportJson\bin\Debug\ExportJson.vsto
-F:\VSWork\ExportJson-for-Excel-2014\ExportJson\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
-F:\VSWork\ExportJson-for-Excel-2014\ExportJson\obj\Debug\ExportJson.Properties.Resources.resources
-F:\VSWork\ExportJson-for-Excel-2014\ExportJson\obj\Debug\ExportJson.csproj.GenerateResource.Cache
-F:\VSWork\ExportJson-for-Excel-2014\ExportJson\obj\Debug\ExportJson.dll
-F:\VSWork\ExportJson-for-Excel-2014\ExportJson\obj\Debug\ExportJson.pdb
