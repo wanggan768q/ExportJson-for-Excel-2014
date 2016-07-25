@@ -212,6 +212,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="ExportJsonPlugin_TemporaryKey.pfx" />
     <None Include="ExportJson_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -248,10 +249,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>ExportJson_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>ExportJsonPlugin_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>63EA093DAAA4BF3586973B0875A7EE64BC188154</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>DE10CE941BA4D7F35BC9188AB98B580F65741674</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
@@ -260,7 +261,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>ExportJson_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>ExportJsonPlugin_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <Win32Resource>
