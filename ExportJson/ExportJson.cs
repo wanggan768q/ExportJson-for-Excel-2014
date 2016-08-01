@@ -256,7 +256,7 @@ namespace ExportJsonPlugin
                                 break;
                             case "F":
                                 {
-                                    stringBuilder.Append(Convert.ToDouble(v));
+                                    stringBuilder.AppendFormat("{0:F}",Convert.ToDouble(v));
                                 }
                                 break;
                             case "S":

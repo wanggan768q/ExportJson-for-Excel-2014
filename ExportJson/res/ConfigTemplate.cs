@@ -152,16 +152,17 @@ $ReadCsvColValue$
 
 	public bool LoadJson(string strContent)
 	{
-	    JsonData jd = JsonMapper.ToObject(strContent);
-	    for (int i = 0; i < jd.Count; ++i)
+	    JsonData jsonData = JsonMapper.ToObject(strContent);
+	    for (int i = 0; i < jsonData.Count; ++i)
 	    {
+	    	JsonData jd = jsonData[i];
 	    	if(jd.Keys.Count != $ColCount$)
             {
                 Debug.Log("$Template$.json中列数量与生成的代码不匹配!");
                 return false;
             }
             
-	       $Template$Element member = new $Template$Element();
+	        $Template$Element member = new $Template$Element();
 $ReadJsonColValue$
 
 	        member.IsValidate = true;

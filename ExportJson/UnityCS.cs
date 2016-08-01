@@ -134,7 +134,7 @@ namespace ExportJsonPlugin
                         sb.AppendFormat(T3 + E("member.{0} = (int)jd[\"{1}\"];"), key[i], key[i]);
                         break;
                     case "F":
-                        sb.AppendFormat(T3 + E("member.{0} = (float)jd[\"{1}\"];"), key[i], key[i]);
+                        sb.AppendFormat(T3 + E("member.{0} = (float)((double)jd[\"{1}\"]);"), key[i], key[i]);
                         break;
                     case "B":
                         sb.AppendFormat(T3 + E("member.{0} = (bool)jd[\"{1}\"];"), key[i], key[i]);
