@@ -199,12 +199,13 @@
       <SubType>Code</SubType>
     </Compile>
     <None Include="res\ConfigTemplate.cs" />
+    <None Include="res\ConfigLoadTemplate.cs" />
     <Compile Include="UnityCS.cs" />
     <EmbeddedResource Include="ExportJson.resx">
       <DependentUpon>ExportJson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -214,7 +215,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
-    <None Include="ExportJsonPlugin_TemporaryKey.pfx" />
     <None Include="ExportJson_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -254,10 +254,11 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>ExportJsonPlugin_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>DE10CE941BA4D7F35BC9188AB98B580F65741674</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>63EA093DAAA4BF3586973B0875A7EE64BC188154</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject />
@@ -266,11 +267,14 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>ExportJsonPlugin_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>ExportJson_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <Win32Resource>
     </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
   </PropertyGroup>
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

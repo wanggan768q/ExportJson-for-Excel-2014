@@ -7,11 +7,20 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
 using fastJSON;
+using ExportJson.Properties;
+using System.Linq;
 
 namespace ExportJsonPlugin
 {
     public partial class ExportJson
     {
+        private string WorkbookFullName
+        {
+            get
+            {
+                return Globals.ThisAddIn.Application.ActiveWorkbook.FullName;
+            }
+        }
         private void ExportJson_Load(object sender, RibbonUIEventArgs e)
         {
         }
@@ -27,29 +36,40 @@ namespace ExportJsonPlugin
                 MessageBox.Show("数据异常,请检查");
                 return;
             }
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "json文件(*.json)|";
-            string fileName = Path.GetFileNameWithoutExtension(Globals.ThisAddIn.Application.ActiveWorkbook.FullName);
-            saveFileDialog.FileName = fileName;
-            saveFileDialog.ShowDialog();
+//             SaveFileDialog saveFileDialog = new SaveFileDialog();
+//             saveFileDialog.Filter = "json文件(*.json)|";
+//             string fileName = Path.GetFileNameWithoutExtension(Globals.ThisAddIn.Application.ActiveWorkbook.FullName);
+//             string[] titles = fileName.Split('_');
+//             string name = titles[0];
+//             saveFileDialog.InitialDirectory = Path.GetDirectoryName(fileName);
+//             saveFileDialog.FileName = name;
+//             saveFileDialog.ShowDialog();
 
-            string jsonFileName = "";
-            if (!saveFileDialog.FileName.EndsWith(".json"))
+            string fileName = Path.GetFileNameWithoutExtension(WorkbookFullName);
+            string[] titles = fileName.Split('_');
+            string name = titles[0];
+
+            string path = Path.GetDirectoryName(WorkbookFullName) + Path.DirectorySeparatorChar + "Out" + Path.DirectorySeparatorChar + "Json";
+            if (!Directory.Exists(path))
             {
-                jsonFileName = saveFileDialog.FileName + ".json";
+                Directory.CreateDirectory(path);
             }
 
-            FileStream fs = new FileStream(jsonFileName, FileMode.OpenOrCreate);
-            StreamWriter sw = new StreamWriter(fs);
-            sw.Write(json);
-            sw.Close();
+            string jsonFileName = "";
+            if (!fileName.EndsWith(".json"))
+            {
+                //jsonFileName = saveFileDialog.FileName + ".json";
+                jsonFileName = path + Path.DirectorySeparatorChar + name + ".json";
+            }
 
-            
-            //             ExportCShape ex = new ExportCShape(saveFileDialog.FileName);
-            //             ex.AddField("描述...", FieldType.Int, "Name");
-            //             ex.Finish();
-            
-            MessageBox.Show("导出完成");
+            if (jsonFileName.Contains(":"))
+            {
+                FileStream fs = new FileStream(jsonFileName, FileMode.OpenOrCreate);
+                StreamWriter sw = new StreamWriter(fs);
+                sw.Write(json);
+                sw.Close();
+                MessageBox.Show("导出完成");
+            }
         }
 
         /// <summary>
@@ -290,6 +310,9 @@ namespace ExportJsonPlugin
             UnityCS cs = new UnityCS();
             cs.Export(fileName[0], typeRang, keyRang,Des);
         }
+
+
+        
 
         /// <summary>
         /// 

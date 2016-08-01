@@ -22,7 +22,7 @@ namespace ExportJson.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace ExportJson.Properties {
         ///   返回此类使用的缓存的 ResourceManager 实例。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExportJson.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace ExportJson.Properties {
         ///   重写当前线程的 CurrentUICulture 属性。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -62,14 +62,48 @@ namespace ExportJson.Properties {
         
         /// <summary>
         ///   查找类似 using UnityEngine;
-        ///using GenPB;
+        ///using System.Collections;
+        ///
+        ///public class ConfigLoad : MonoBehaviour {
+        ///
+        ///	private string textContent;
+        ///
+        ///	public IEnumerator LoadConfig () {
+        ///
+        ///$loadConfItem$
+        ///
+        ///		yield return true;
+        ///	}
+        ///
+        ///    IEnumerator LoadData (string name) {
+        ///
+        ///		string path = Ex.Utils.GetStreamingAssetsFilePath(name, &quot;CSV&quot;);
+        ///	
+        ///		WWW www = new WWW(path);
+        ///		yield return www;
+        ///
+        ///		textContent = www.text;
+        ///		yield return true;
+        ///	}
+        ///}
+        /// 的本地化字符串。
+        /// </summary>
+        public static string ConfigLoadTemplate {
+            get {
+                return ResourceManager.GetString("ConfigLoadTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 using UnityEngine;
         ///using System;
         ///using System.IO;
         ///using System.Collections;
         ///using System.Collections.Generic;
+        ///using HS.IO;
+        ///using LitJson;
         ///
         ///
-        /////$CNName$配置数据类
         ///public class $Template$Element
         ///{
         ///$FieldDefine$
@@ -80,17 +114,17 @@ namespace ExportJson.Properties {
         ///	}
         ///};
         ///
-        /////$CNName$配置封装类
+        ///
         ///public class $Template$Table
         ///{
         ///
         ///	private $Template$Table()
         ///	{
-        ///		m_mapElements = new Dictionary&lt;int, $Template$Element&gt;();
-        ///		m_emptyItem = new $Template$Element();
-        ///		m_vecAllElements = new L [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        ///		_MapElements = new Dictionary&lt;int, $Template$Element&gt;();
+        ///		_EmptyItem = new $Template$Element();
+        ///		_VecAllElements = new List&lt;$Template$Eleme [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
-        internal static string ConfigTemplate {
+        public static string ConfigTemplate {
             get {
                 return ResourceManager.GetString("ConfigTemplate", resourceCulture);
             }
@@ -99,7 +133,7 @@ namespace ExportJson.Properties {
         /// <summary>
         ///   查找类似于 (Icon) 的 System.Drawing.Icon 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Icon josn_icon {
+        public static System.Drawing.Icon josn_icon {
             get {
                 object obj = ResourceManager.GetObject("josn_icon", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
