@@ -64,7 +64,7 @@ namespace ExportJsonPlugin
 
             if (jsonFileName.Contains(":"))
             {
-                FileStream fs = new FileStream(jsonFileName, FileMode.OpenOrCreate);
+                FileStream fs = new FileStream(jsonFileName, FileMode.CreateNew | FileMode.OpenOrCreate);
                 StreamWriter sw = new StreamWriter(fs);
                 sw.Write(json);
                 sw.Close();
