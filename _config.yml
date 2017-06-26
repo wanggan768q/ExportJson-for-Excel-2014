@@ -1,0 +1,8 @@
+title: Excel 导出 Json 数据插件
+description: Excel 插件 导出 Json 数据格式
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions
