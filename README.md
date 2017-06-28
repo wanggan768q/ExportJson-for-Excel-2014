@@ -1,9 +1,8 @@
 # Excel导出Json插件
     作者：郭晓波
     邮箱：Ambitiongxb@foxmail.com  
-
 ## 普通格式  
-	Excel 插件 导出 Json 数据格式
+    Excel 插件 导出 Json 数据格式
  ------------------------------------------------------------------- 
 ## 数据类型格式  
 	Excel格式如下：  
@@ -13,9 +12,10 @@
 	第三行：字段名  
  ------------------------------------------------------------------- 
 # 安装包下载  
-
+[下载网站](http://wanggan768q.github.io/ExportJson-for-Excel-2014/)  
+ 
 [必须下载](https://raw.githubusercontent.com/wanggan768q/ExportJson-for-Excel-2014/master/Download/Essential/vstor_redist.exe)  
-[ExportJson 1.1.0.33 安装包下载](https://raw.githubusercontent.com/wanggan768q/ExportJson-for-Excel-2014/master/Download/ExportJson_1_1_0_33.zip)   
+[ExportJson 1.1.0.33 安装包下载](https://raw.githubusercontent.com/wanggan768q/ExportJson-for-Excel-2014/master/Download/ExportJson_1_1_0_33.zip)  
 [ExportJson 1.1.0.32 安装包下载](https://raw.githubusercontent.com/wanggan768q/ExportJson-for-Excel-2014/master/Download/ExportJson_1_1_0_32.zip)  
 [ExportJson 1.1.0.31 安装包下载](https://raw.githubusercontent.com/wanggan768q/ExportJson-for-Excel-2014/master/Download/ExportJson_1_1_0_31.zip)  
 [ExportJson 1.1.0.30 安装包下载](https://raw.githubusercontent.com/wanggan768q/ExportJson-for-Excel-2014/master/Download/ExportJson_1_1_0_30.zip)  
