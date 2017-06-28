@@ -1,3 +1,4 @@
+//éƒ­æ™“æ³¢
 using UnityEngine;
 using System;
 using System.IO;
@@ -75,7 +76,7 @@ public class $Template$Table
 		byte[] binTableContent = null;
 		if( !HS_ByteRead.ReadBinFile("$Template$.bin", out binTableContent ) )
 		{
-			Debug.Log("ÅäÖÃÎÄ¼ş[$Template$.bin]Î´ÕÒµ½");
+			Debug.Log("é…ç½®æ–‡ä»¶[$Template$.bin]æœªæ‰¾åˆ°");
 			return false;
 		}
 		return LoadBin(binTableContent);
@@ -103,7 +104,7 @@ public class $Template$Table
 		}
 		if(vecLine.Count != $ColCount$)
 		{
-			Debug.Log("$Template$.jsonÖĞÁĞÊıÁ¿ÓëÉú³ÉµÄ´úÂë²»Æ¥Åä!");
+			Debug.Log("$Template$.json ä¸­åˆ—æ•°é‡ä¸ç”Ÿæˆçš„ä»£ç ä¸åŒ¹é…!");
 			return false;
 		}
 $CheckColName$
@@ -128,7 +129,7 @@ $ReadBinColValue$
 		vecLine = HS_ByteRead.readCsvLine( strContent, ref contentOffset );
 		if(vecLine.Count != $ColCount$)
 		{
-			Debug.Log("$Template$.jsonÖĞÁĞÊıÁ¿ÓëÉú³ÉµÄ´úÂë²»Æ¥Åä!");
+			Debug.Log("$Template$.json ä¸­åˆ—æ•°é‡ä¸ç”Ÿæˆçš„ä»£ç ä¸åŒ¹é…!");
 			return false;
 		}
 $CheckColName$
@@ -158,7 +159,7 @@ $ReadCsvColValue$
 	    	JsonData jd = jsonData[i];
 	    	if(jd.Keys.Count != $ColCount$)
             {
-                Debug.Log("$Template$.jsonÖĞÁĞÊıÁ¿ÓëÉú³ÉµÄ´úÂë²»Æ¥Åä!");
+                Debug.Log("$Template$.jsonä¸­åˆ—æ•°é‡ä¸ç”Ÿæˆçš„ä»£ç ä¸åŒ¹é…!");
                 return false;
             }
             
